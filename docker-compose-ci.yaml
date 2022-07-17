@@ -1,0 +1,7 @@
+version: "3.9"
+
+services:
+  api:
+    image: adarik/hw19:$GITHUB_REF_NAME-$GITHUB_RUN_ID
+    ports:
+      - "80:80"
