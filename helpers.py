@@ -26,11 +26,6 @@ def auth_required(func):
 
 
 def admin_required(func):
-    """
-    Функция-декоратор для проверки на права доступа.
-
-    :param func: Декорируемая функция
-    """
     def wrapper(*args, **kwargs):
         if 'Authorization' not in request.headers:
             abort(401)
